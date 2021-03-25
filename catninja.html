@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Cat to ninja puzzle">
+		<title>Cat to Ninja</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('img').click(function(){
+				//console.log('image is = ',$(this).attr('data-alt-src'));
+				var current_img = $(this).attr('src');
+				var replace_img = $(this).attr('data-alt-src');
+				$('img[src="' + current_img + '"]').attr('src',replace_img);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Cat to Ninja</h1>
+			<div class="main">
+				<img src="cat0.png" alt="cat0 to ninja0" data-alt-src="ninja0.png">
+				<img src="cat1.png" alt="cat1 to ninja1" data-alt-src="ninja1.png">
+				<img src="cat2.png" alt="cat2 to ninja2" data-alt-src="ninja2.png">
+				<img src="cat3.png" alt="cat3 to ninja3" data-alt-src="ninja3.png">
+				<img src="cat4.png" alt="cat4 to ninja4" data-alt-src="ninja4.png">
+			</div>
+		</div>
+	</body>
+</html>
